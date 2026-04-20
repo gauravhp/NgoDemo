@@ -1,18 +1,9 @@
 import {
-  CheckCircle2,
-  Circle,
   Clock,
   Baby,
   Calendar,
   Stethoscope,
-  BookOpen,
-  AlertTriangle,
-  Info,
-  ShieldCheck,
-  Zap,
-  Activity,
-  Server,
-  Database
+  BookOpen
 } from 'lucide-react';
 
 export interface DonorProfile {

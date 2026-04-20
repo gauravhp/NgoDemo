@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Users,
   Settings,
@@ -10,10 +10,6 @@ import {
   Home,
   ClipboardList,
   AlertTriangle,
-  ArrowUpRight,
-  TrendingUp,
-  CreditCard,
-  Bell,
   Download,
   UserMinus,
   CalendarPlus,
@@ -42,8 +38,7 @@ import {
   mockAdminEvents,
   mockRecentPayments,
   mockAdminUsers,
-  mockAuditLogs,
-  mockSystemConfig
+  mockAuditLogs
 } from "@/mockData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -69,7 +64,6 @@ import {
 const Admin = () => {
   const [activeTab, setActiveTab] = useState('operations');
   const [editingItem, setEditingItem] = useState<any>(null);
-  const [selectedHouse, setSelectedHouse] = useState<any>(null);
   const [selectedResident, setSelectedResident] = useState<any>(null);
 
   return (
@@ -776,7 +770,7 @@ const Admin = () => {
                       
                       <Button 
                         variant="outline" 
-                        onClick={() => setSelectedHouse(house)}
+                        onClick={() => {}}
                         className="w-full mt-4 rounded-2xl border-gray-100 text-gray-900 font-black text-[10px] uppercase tracking-widest h-12 hover:bg-gray-50"
                       >
                         Manage Location

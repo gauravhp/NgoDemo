@@ -1,5 +1,4 @@
 import {
-  Heart,
   TrendingUp,
   Calendar,
   Gift,

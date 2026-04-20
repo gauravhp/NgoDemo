@@ -4,21 +4,16 @@ import {
   BookOpen,
   ChevronRight,
   CheckCircle2,
-  Clock,
-  Circle,
-  Calendar,
   Sparkles,
-  MapPin,
   Home,
   PackageCheck,
   Truck,
   Users,
   Share2,
-  HeartHandshake
+  Circle
 } from 'lucide-react';
 import {
-  Card,
-  CardContent
+  Card
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -260,7 +255,7 @@ const Mother = () => {
           {/* Vertical Line */}
           <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-100"></div>
 
-          {timelineData.map((item, index) => (
+          {timelineData.map((item) => (
             <div key={item.id} className="relative pl-12 pb-10 last:pb-0">
               {/* Timeline Icon/Dot */}
               <div className={`absolute left-0 p-1.5 rounded-full z-10 ${
