@@ -4,7 +4,8 @@ import {
   ShieldCheck,
   ArrowRight,
   Sparkles,
-  ExternalLink
+  ExternalLink,
+  MessageCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -33,6 +34,42 @@ const Home = () => {
           Real impact, real stories, real results.
         </p>
       </motion.section>
+
+      {/* AI Assistant Widget */}
+      <motion.button
+        type="button"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+        whileHover={{ y: -6, scale: 1.01 }}
+        className="w-full max-w-md px-4 text-left cursor-pointer"
+        aria-label="Agent Mia demo assistant widget"
+      >
+        <Card className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/95 shadow-lg shadow-slate-200/60 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-sky-100/70">
+          <CardContent className="flex items-center gap-5 p-5 md:p-6">
+            <div className="relative shrink-0">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-100 via-sky-100 to-white blur-md" />
+              <img
+                src="/Agent_mia.png"
+                alt="Agent Mia logo"
+                className="relative h-20 w-20 rounded-full object-cover ring-1 ring-slate-200"
+              />
+            </div>
+            <div className="min-w-0 space-y-1.5">
+              <div className="flex items-center gap-2">
+                <Badge className="bg-sky-50 text-sky-700 border-none font-black text-[10px] uppercase tracking-widest">
+                  AI Assistant
+                </Badge>
+                <MessageCircle className="h-4 w-4 text-slate-400" />
+              </div>
+              <p className="text-2xl font-black text-slate-900">Agent Mia</p>
+              <p className="text-sm font-medium text-slate-500">
+                Your personal Assistant
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.button>
 
       {/* Action Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl px-4">
